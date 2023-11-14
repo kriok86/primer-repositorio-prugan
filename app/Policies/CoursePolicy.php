@@ -5,8 +5,12 @@ namespace App\Policies;
 use App\Models\User;
 use App\Models\Course;
 
+
+
 class CoursePolicy
 {
+
+    
     /**
      * Create a new policy instance.
      */
@@ -18,8 +22,8 @@ class CoursePolicy
     public function enrolled(User $user, Course $courses){
         return $courses->students->contains($user->id);
     }
-    public function published(?User $user, Course $course){
-        if ($course->status == 3) {
+    public function published(?User $user, Course $courses){
+        if ($courses->status == 3) {
             return true;
         }else {
             return false;

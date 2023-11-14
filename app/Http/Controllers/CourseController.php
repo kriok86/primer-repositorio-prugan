@@ -12,6 +12,7 @@ class CourseController extends Controller
     }
 
     public function show(Course $courses){
+        $this->authorize('published', $courses);
         return view('courses.show', compact('courses'));
     }
 

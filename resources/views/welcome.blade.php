@@ -1,10 +1,10 @@
 <x-app-layout>
-    <section class="bg-cover" style="background-image: url({{asset('img/home/portada.jpg')}})">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
-            <div class="w-full md:w-3/4 lg:w-1/2">
-                <h1 class="text-gray-950 font-bold text-4xl">Centro de formacion profesional N°20   
+    <section class="bg-cover" style="background-image: url({{asset('img/home/portadas1.jpeg')}})">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-24">
+            <div class="w-full md:w-3/4 lg:w-1/2 mb-8">
+                <h1 class="text-gray-950 font-bold text-4xl text-center">Centro de formacion profesional N°20   
                 </h1>
-                <p class="text-gray-950  font-bold text-lg mt-2 mb-4">El CFP N°20 aspira a la       formacion profesional integral de las personas mediante estrategias que favorezcan su inclusion social y laboral </p>
+                <p class="text-white  font-bold text-lg">El CFP N°20 aspira a la formacion profesional integral de las personas mediante estrategias que favorezcan su inclusion social y laboral </p>
 
                     <!-- component BUSCADOR-->
                     <!-- This is an example component  -->

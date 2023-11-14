@@ -90,9 +90,9 @@
                         <a class="bg-red-500 hover:bg-blue-700 text-white text-center block font-bold py-1 px-4 mt-4 rounded" href="{{route('courses.status', $courses)}}"> Continuar con el curso</a>
                         
                         @else
-                            <form action="{{route('courses.erolled', $courses)}}" method="POST">
+                            <form action="{{route('courses.enrolled', $courses)}}" method="POST">
                                 @csrf
-                                    <a class="bg-red-500 hover:bg-blue-700 text-white text-center block font-bold py-2 px-4 mt-4 rounded cursor-pointer" type="submit"> Solicitar inscripcion </a>
+                                    <button class="bg-red-500 hover:bg-blue-700 text-white text-center block font-bold py-2 px-4 mt-4 rounded cursor-pointer" type="submit"> Solicitar inscripcion </button>
                             </form>
                         @endcan
                 </div>
