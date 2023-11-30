@@ -22,7 +22,7 @@
                 </figure>
                 <header class="mt-2">
                     <a href="{{route('courses.index')}}" class="text-center text-xl text-gray-700">Cursos</a>
-                    <p class="text-sm text-gray-500">Aqui vamos a colocar alguna descripcion</p>
+                    <p class="text-sm text-gray-500">Aqui encontraras las diversas propuestas formativas</p>
                 </header>
             </article>
             <article>

@@ -15,7 +15,9 @@
             
 			<div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
 				<div class="inline-block min-w-full shadow rounded-lg overflow-hidden">               
-                   
+                  @if ($students->count())
+                      
+                  
                     <table class="min-w-full leading-normal">
 						<thead>
 							<tr>
@@ -60,6 +62,7 @@
                                 @endforeach
 						</tbody>
 					</table>
+                    @endif 
 					<div class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
 						
                         <span class="text-xs xs:text-sm text-gray-900">

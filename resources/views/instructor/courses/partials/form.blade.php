@@ -41,7 +41,7 @@
        @endisset
     </figure>
     <div>
-        <p class="mb-2">Aqui deberiamos colocar alguna descripcion del curso</p>
+        
         {!! Form::file('file', ['class'=>'form-input w-full'. ($errors->has('file') ? 'border-red-600':''), 'id'=>'file', 'accept'=>'image/*']) !!}
         @error('file')
     <strong class="text-xs text-red-600">{{$message}}</strong>
