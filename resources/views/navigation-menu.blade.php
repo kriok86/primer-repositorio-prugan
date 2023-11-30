@@ -135,7 +135,11 @@
                                Administrador
                             </x-dropdown-link>  
                             @endcan
-                            
+                            @can('Ver Cursos')
+                            <x-dropdown-link href="{{ route('Miscursos.misCursos.index')}}">
+                                Mis Cursos
+                            </x-dropdown-link>  
+                            @endcan
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -218,6 +222,11 @@
                 @can('Ver dashboard')
                 <x-responsive-nav-link href="{{ route('admin.home') }}" :active="request()->routeIs('instructor.courses.index')">
                     Administrador
+                </x-responsive-nav-link> 
+                @endcan
+                @can('Leer cursos')
+                <x-responsive-nav-link href="{{ route('Miscursos.misCursos.index') }}" :active="request()->routeIs('instructor.courses.index')">
+                    Mis Cursos
                 </x-responsive-nav-link> 
                 @endcan
                 

@@ -8,6 +8,9 @@ use App\Models\Course;
 //use Psy\TabCompletion\Matcher\FunctionsMatcher;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ApprovedCourse;
+use App\Models\Calificacion;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -41,5 +44,11 @@ class CourseController extends Controller
         Mail::to($course->teacher->mail)->send($mail);
 
         return redirect()->route('admin.courses.index')->with('info','El curso se publico con exito');
+    }
+
+    public function notas(Course $course){
+        $course->students();
+
+        return view('admin.courses.notas', compact('course'));
     }
 }

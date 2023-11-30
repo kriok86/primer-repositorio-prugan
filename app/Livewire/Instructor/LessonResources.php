@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Storage;
 class LessonResources extends Component
 {
     
-    use SupportFileUploadsWithFileUploads;
+    //use SupportFileUploadsWithFileUploads;
+    use WithFileUploads;
     public $lesson, $file;
 
     public function mount(Lesson $lesson){
@@ -41,7 +42,7 @@ class LessonResources extends Component
 
     public function destroy(){
         Storage::delete($this->lesson->resource->url);
-        $this->lesson->resource->delete;
+        $this->lesson->resource->delete();
         $this->lesson = Lesson::find($this->lesson->id);
     }
 

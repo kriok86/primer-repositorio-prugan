@@ -77,6 +77,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Courses');
     }
 
+    public function notas()
+    {
+        return $this->hasMany(Calificacion::class);
+    }
+
     //relacion muchos a muchos
 
     public function courses_erroled(){

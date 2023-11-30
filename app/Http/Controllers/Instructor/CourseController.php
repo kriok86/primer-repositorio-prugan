@@ -7,11 +7,15 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\Level;
+use App\Livewire\Instructor\CoursesStudents;
+use App\Models\Calificacion;
 use Illuminate\Support\Facades\Storage;
 
 
 class CourseController extends Controller
 {
+
+
     public function __construct()
     {
         $this->middleware('can:Leer cursos')->only('index');
@@ -83,6 +87,7 @@ class CourseController extends Controller
         
         $categories = Category::pluck('name', 'id');
         $levels = Level::pluck('name', 'id');
+        $calificacion = Calificacion::pluck('name', 'id');
            
 
         return view('instructor.courses.edit', compact('course', 'categories', 'levels'));
@@ -139,6 +144,19 @@ class CourseController extends Controller
         return view('instructor.courses.goals', compact('course'));
     }
 
+   //metodos para las calificaciones
+
+    public function notas(Course $course){
+
+        
+        return view('instructor.courses.notas',compact('course'));
+        
+    }
+    //Metodos para la asistencia
+
+    public function asistencia(Course $course){
+        return view('instructor.courses.asistencia', compact('course'));
+    }
     public function status(Course $course){
         $course->status = 2;
         $course-> save();

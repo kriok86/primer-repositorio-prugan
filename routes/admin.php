@@ -18,3 +18,5 @@ Route::get('courses', [CourseController::class, 'index'])->name('courses.index')
 Route::get('courses/{course}', [CourseController::class, 'show'])->name('courses.show');
 
 Route::post('courses/approved', [CourseController::class,'approved'])->name('courses.approved');
+
+Route::get('/notas', [CourseController::class, 'notas'])->name('courses.notas');

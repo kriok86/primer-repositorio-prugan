@@ -1,6 +1,6 @@
 <div>
-    <div class="bg-gray-200 py-4 mb-16 ">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gray-200 py-4 mb-16 flex-col">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 ">
             <button class="bg-white shadow h-12 px-4 rounded-lg text-gray-700 mr-4" wire:click="resetFilters"> 
             <i class="fa fa-university text-xs mr-2"></i>
             Todos los cursos

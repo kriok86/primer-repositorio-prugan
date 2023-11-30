@@ -342,8 +342,8 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'text' => 'NOTAS',
+            'route'  => 'admin.courses.notas',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [

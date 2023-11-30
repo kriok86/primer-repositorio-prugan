@@ -43,12 +43,6 @@
                         <li class="leading-7 mb-1 border-l-4  @routeIs('instructor.courses.students',$course) border-indigo-400 @else border-transparent @endif pl-2">
                             <a href="{{route('instructor.courses.students', $course)}}">Estudiantes</a>
                         </li>
-                        <li class="leading-7 mb-1 border-l-4  @routeIs('instructor.courses.asistencia',$course) border-indigo-400 @else border-transparent @endif pl-2">
-                            <a href="{{route('instructor.courses.asistencia', $course)}}">Asistencias</a>
-                        </li>
-                        <li class="leading-7 mb-1 border-l-4  @routeIs('instructor.courses.notas',$course) border-indigo-400 @else border-transparent @endif pl-2">
-                            <a href="{{route('instructor.courses.notas', $course)}}">Cargar notas</a>
-                        </li>
                     </ul>
 
                     @switch($course->status)
@@ -79,7 +73,7 @@
                             
                     @endswitch
 
-                       
+                
 
 
                 </aside>
